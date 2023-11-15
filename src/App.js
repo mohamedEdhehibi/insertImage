@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import LogoIMG from "./image/profile.png";
 function App() {
+  const firstName='med'
+  const lastName='Ahmed'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+  <>
+      
+       <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <div>
+        <img src={LogoIMG}  alt='Will Smith' />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {firstName} {lastName}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      </div>
+      <p> fullname is {firstName + ' '+lastName} </p>
+
+   
+   
+   
+  
+    </> 
+  )
 }
 
-export default App;
+export default App
